@@ -1,0 +1,60 @@
+﻿@model Market_store.Models.Product1
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_DashboardLayout.cshtml";
+}
+
+<div class="col-md-12">
+    <div class="page-header-title">
+        <h5 class="m-b-10"> Products </h5>
+    </div>
+    <ul class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/Dashboard/Dashboard"><i class="feather icon-home"></i></a></li>
+        <li class="breadcrumb-item"><a href="javascript:">Edit</a></li>
+    </ul>
+</div>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Productid" />
+            <div class="form-group">
+                <label asp-for="Productname" class="control-label"> Product Name</label>
+                <input asp-for="Productname" class="form-control" />
+                <span asp-validation-for="Productname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Price" class="control-label">Product Price</label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Productvalue" class="control-label">Product Capital</label>
+                <input asp-for="Productvalue" class="form-control" />
+                <span asp-validation-for="Productvalue" class="text-danger"></span>
+            </div>
+            <div class="form-group" hidden>
+                <label asp-for="Image" class="control-label"></label>
+                <input asp-for="Image" class="form-control" />
+                <span asp-validation-for="Image" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ImageFile" class="control-label"> Product Picture</label>
+                <input asp-for="ImageFile" class="form-control" accept="image/*" />
+                <span asp-validation-for="ImageFile" class="text-danger"></span>
+            </div>
+
+            <div class="form-group" hidden>
+                <label asp-for="Productsize" class="control-label"></label>
+                <input asp-for="Productsize" class="form-control" />
+                <span asp-validation-for="Productsize" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+                <a asp-action="Index" class="btn btn-secondary" data-dismiss="modal">Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>

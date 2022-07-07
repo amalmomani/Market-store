@@ -1,0 +1,246 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Hope Shop</title>
+
+     
+    <!-- Favicon icon -->
+    <link rel="shortcut icon" type="image/x-icon" href="~/Home/img/favicons/favicon.ico">
+    <!-- fontawesome icon -->
+    <link rel="stylesheet" href="~/assets/fonts/fontawesome/css/fontawesome-all.min.css">
+    <!-- animation css -->
+    <link rel="stylesheet" href="~/assets/plugins/animation/css/animate.min.css">
+    <!-- vendor css -->
+    <link rel="stylesheet" href="~/assets/css/style.css">
+
+</head>
+
+<body>
+    <!-- [ Pre-loader ] start -->
+    <div class="loader-bg">
+        <div class="loader-track">
+            <div class="loader-fill"></div>
+        </div>
+    </div>
+    <!-- [ Pre-loader ] End -->
+    <!-- [ navigation menu ] start -->
+    <nav class="pcoded-navbar">
+        <div class="navbar-wrapper">
+            <div class="navbar-brand header-logo">
+                <a href="/Dashboard/Dashboard" class="b-brand">
+                    <div class="b-bg">
+                        <i class="feather icon-shopping-cart"></i>
+                    </div>
+                    <span class="b-title">Hope Shop</span>
+                </a>
+                <a class="mobile-menu" id="mobile-collapse" href="javascript:"><span></span></a>
+            </div>
+            <div class="navbar-content scroll-div">
+                <ul class="nav pcoded-inner-navbar">
+                    <li class="nav-item pcoded-menu-caption">
+                        <label>Navigation</label>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/Dashboard/Dashboard" class="nav-link "><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Dashboard</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/Useraccounts/Index" class="nav-link "><span class="pcoded-micon"><i class="feather icon-users"></i></span><span class="pcoded-mtext">Users</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/Category1/Index" class="nav-link "><span class="pcoded-micon"><i class="feather icon-server"></i></span><span class="pcoded-mtext">Categories</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/Shop1/Index" class="nav-link "><span class="pcoded-micon"><i class="feather icon-shopping-cart"></i></span><span class="pcoded-mtext">Stores</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/Product1/Index" class="nav-link "><span class="pcoded-micon"><i class="feather icon-bar-chart-2"></i></span><span class="pcoded-mtext">Products</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/Productshops/Index" class="nav-link"><span class="pcoded-micon"><i class="feather icon-menu"></i></span><span class="pcoded-mtext">Store's Products</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/Contactus/Index" class="nav-link "><span class="pcoded-micon"><i class="feather icon-mail"></i></span><span class="pcoded-mtext"> Contact Us Messages</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/Dashboard/Reports" class="nav-link "><span class="pcoded-micon"><i class="feather icon-refresh-cw"></i></span><span class="pcoded-mtext"> Reports </span></a>
+                    </li>
+                    <li class="nav-item pcoded-hasmenu">
+                        <a href="javascript:" class="nav-link "><span class="pcoded-micon"><i class="feather icon-file-minus"></i></span><span class="pcoded-mtext">Orders</span></a>
+                        <ul class="pcoded-submenu">
+                            <li class=""><a href="/Dashboard/PaiedJoinTable" class="">Paied Orders</a></li>
+                            <li class=""><a href="/Dashboard/JoinTable" class="">Unpaied Orders</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item pcoded-hasmenu">
+                        <a href="javascript:" class="nav-link "><span class="pcoded-micon"><i class="feather icon-box"></i></span><span class="pcoded-mtext">Manage Pages</span></a>
+                        <ul class="pcoded-submenu">
+                            <li class=""><a href="/Mainpages/Index" class="">Home page</a></li>
+                            <li class=""><a href="/Testimonials/Index" class="">Testimonials</a></li>
+                            <li class=""><a href="/Aboutus/Index" class=""> About Us</a></li>
+
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- [ navigation menu ] end -->
+    <!-- [ Header ] start -->
+    <header class="navbar pcoded-header navbar-expand-lg navbar-light">
+        <div class="m-header">
+            <a class="mobile-menu" id="mobile-collapse1" href="javascript:"><span></span></a>
+            <a href="/Dashboard/Dashboard" class="b-brand">
+                <div class="b-bg">
+                    <i class="feather icon-trending-up"></i>
+                </div>
+                <span class="b-title">Hope Shop</span>
+            </a>
+        </div>
+        <a class="mobile-menu" id="mobile-header" href="javascript:">
+            <i class="feather icon-more-horizontal"></i>
+        </a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+                <li><a href="javascript:" class="full-screen" onclick="javascript:toggleFullScreen()"><i class="feather icon-maximize"></i></a></li>
+                @*<li class="nav-item">
+                        <div class="main-search">
+                            <div class="input-group">
+                                <input type="text" id="m-search" class="form-control" placeholder="Search . . .">
+                                <a href="javascript:" class="input-group-append search-close">
+                                    <i class="feather icon-x input-group-text"></i>
+                                </a>
+                                <span class="input-group-append search-btn btn btn-primary">
+                                    <i class="feather icon-search input-group-text"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </li>*@
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li>
+                    <div class="dropdown drp-user">
+                        <a href="javascript:" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="icon feather icon-settings"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right profile-notification">
+                            <div class="pro-head">
+                                <img src="~/assets/images/user/avatar-1.jpg" class="img-radius" alt="User-Profile-Image">
+                                <span>@ViewBag.Fullname</span>
+                                <a asp-controller="Dashboard" asp-action="Logout" class="dud-logout" title="Logout">
+                                    <i class="feather icon-log-out"></i>
+                                </a>
+                            </div>
+                            <ul class="pro-body">
+                                <li><a href="/Useraccounts/Edit/@ViewBag.Userid" class="dropdown-item"><i class="feather icon-user"></i> Profile</a></li>
+                                <li><a asp-controller="Dashboard" asp-action="Logout" class="dud-logout" title="Logout"><i class="feather icon-lock"></i> Logout </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <!-- [ Header ] end -->
+    <!-- [ Main Content ] start -->
+    <div class="pcoded-main-container">
+        <div class="pcoded-wrapper">
+            <div class="pcoded-content">
+                <div class="pcoded-inner-content">
+
+                    @RenderBody()
+                    <!-- /. PAGE WRAPPER  -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/assets/js/vendor-all.min.js"></script>
+    <script src="~/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="~/assets/js/pcoded.min.js"></script>
+
+
+</body>
+</html>
+    <!--<div id="wrapper">
+        <nav class="navbar navbar-default top-navbar" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/Dashboard/Dashboard"><strong>Hope Shop</strong></a>
+
+                <div id="sideNav" href=""><i class="fa fa-caret-right"></i></div>
+            </div>
+
+            <ul class="nav navbar-top-links navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li>
+                            <a href="/Useraccounts/Edit/@ViewBag.Userid"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                    </ul>-->
+                    <!-- /.dropdown-user -->
+                <!--</li>-->
+                <!-- /.dropdown -->
+            <!--</ul>
+        </nav>-->
+        <!--/. NAV TOP  -->
+        <!--<nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+                    <li>
+                        <a href="/Dashboard/Dashboard"><i class="fa fa-dashboard"></i> Home </a>
+                    </li>
+                    <li>
+                        <a href="/Useraccounts/Index"><i class="fa fa-bar-chart-o"></i> Users </a>
+                    </li>
+                    <li>
+                        <a href="/Category1/Index"><i class="fa fa-qrcode"></i> Categories</a>
+                    </li>
+                    <li>
+                        <a href="/Shop1/Index"><i class="fa fa-table"></i> Stores</a>
+                    </li>
+                    <li>
+                        <a href="/Orderproducts/Index"><i class="fa fa-table"></i>Products</a>
+                    </li>
+                    <li>
+                        <a href="/Contactus/Index"><i class="fa fa-qrcode"></i> Contact Us Messages</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-sitemap"></i> Manage Pages <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="/Mainpages/Index"> Home Page </a>
+                            </li>
+                            <li>
+                                <a href="/Testimonials/Index"> Testimonial</a>
+                            </li>
+                            <li>
+                                <a href="/Aboutus/Index"> About Us</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+        </nav>-->
+        <!-- /. NAV SIDE  -->
+
+        <!--<div id="page-wrapper">
+            @RenderBody()-->
+            <!-- /. PAGE WRAPPER  -->
+        <!--</div>
+    </div>-->
+ 

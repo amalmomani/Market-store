@@ -1,0 +1,39 @@
+﻿@model Market_store.Models.Productshop
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_DashboardLayout.cshtml";
+}
+
+<div class="col-md-12">
+    <div class="page-header-title">
+        <h5 class="m-b-10"> Manage store's products </h5>
+    </div>
+    <ul class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/Dashboard/Dashboard"><i class="feather icon-home"></i></a></li>
+        <li class="breadcrumb-item"><a href="javascript:"> Products || stores </a></li>
+    </ul>
+</div>
+<hr />
+<div class="panel panel-default">
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Productid" class="control-label">Product name</label>
+                    <select asp-for="Productid" class="form-control" asp-items="ViewBag.Productid"></select>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Shopid" class="control-label">Shop name</label>
+                    <select asp-for="Shopid" class="form-control" asp-items="ViewBag.Shopid"></select>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Save" class="btn btn-primary" />
+                    <a asp-action="Index" class="btn btn-secondary" data-dismiss="modal">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    </div>
+ 

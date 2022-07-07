@@ -1,0 +1,49 @@
+﻿@model Market_store.Models.Product1
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_DashboardLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Product1</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Productname)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Productname)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Productvalue)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Productvalue)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Image)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Image)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Productsize)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Productsize)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Productid">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
