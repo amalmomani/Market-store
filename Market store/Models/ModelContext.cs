@@ -37,13 +37,13 @@ namespace Market_store.Models
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseOracle("USER ID=TAH13_User13;PASSWORD=Ahmad118513;DATA SOURCE=94.56.229.181:3488/traindb");
+                optionsBuilder.UseOracle("USER ID=TAH13_User46;PASSWORD=amal;DATA SOURCE=94.56.229.181:3488/traindb");
             }
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.HasDefaultSchema("TAH13_USER13")
+            modelBuilder.HasDefaultSchema("TAH13_USER46")
                 .HasAnnotation("Relational:Collation", "USING_NLS_COMP");
 
             modelBuilder.Entity<Aboutu>(entity =>
