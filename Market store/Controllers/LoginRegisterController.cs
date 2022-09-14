@@ -30,7 +30,7 @@ namespace Market_store.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Register([Bind("Userid,Fullname,Phonenumber,Image,ImageFile,Email,Password,Roleid")] Useraccount useraccount)
+        public async Task<IActionResult> Register(decimal id, [Bind("Userid,Fullname,Phonenumber,Image,ImageFile,Email,Password,Roleid")] Useraccount useraccount)
         {
             if (ModelState.IsValid)
             {
